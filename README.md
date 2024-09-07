@@ -21,7 +21,7 @@ A web application dashboard built with Vite, React, Material-UI, and Bootstrap.
     npm install react-router-dom
     npm install axios
     npm install @fontsource/roboto
-
+    npm i @lottiefiles/lottie-player
 
     ```
 
@@ -44,7 +44,7 @@ A web application dashboard built with Vite, React, Material-UI, and Bootstrap.
 
 2. Add remote origin:
     ```bash
-    git remote add origin https://github.com/navi4347/PercientDashboard.git
+    git remote add origin https://github.com/navi4347/NotiE.git
     ```
 
 3. Add all files to the repository:
@@ -71,6 +71,7 @@ A web application dashboard built with Vite, React, Material-UI, and Bootstrap.
 - **Bootstrap:** The most popular HTML, CSS, and JS library in the world
 - **React Router DOM:** Declarative routing for React
 - **Axios:** Promise based HTTP client for the browser and node.js
+- **Lottiefiles:**Platform for scalable animations in web and mobile apps
 
 ## Getting Started
 
