@@ -19,12 +19,12 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
-import GroupsIcon from "@mui/icons-material/Groups";
-import SavedSearchIcon from "@mui/icons-material/SavedSearch";
+import InsightsIcon from '@mui/icons-material/Insights';
 import LogoutIcon from "@mui/icons-material/Logout";
 // import logo from "../assets/logo.png";
 import DashBoardpage from "../../Pages/DashboardPage";
 import AnalyticsPage from "../../Pages/AnalyticsPage";
+import StatusPage from "../../Pages/StatusPage";
 
 const drawerWidth = 240;
 
@@ -101,7 +101,8 @@ export default function PersistentDrawerLeft() {
         return <DashBoardpage />;
       case "Analytics":
         return <AnalyticsPage />;
-    
+      case "StatusReport":
+          return <StatusPage />;
       default:
         return null;
     }
@@ -125,9 +126,9 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
+          {/* <Typography variant="h6" noWrap component="div">
+           text
+          </Typography> */}
         </Toolbar>
       </AppBar>
       <Drawer
@@ -146,13 +147,16 @@ export default function PersistentDrawerLeft() {
         open={open}
       >
         <DrawerHeader>
-          <div style={{ flexGrow: 1, textAlign: "left" }}>
+          <div style={{ flexGrow: 1, textAlign: "center" }}>
             {/* <img
               src={logo}
               alt="Logo"
               className="logo"
               style={{ maxWidth: "100%" }}
             /> */}
+              <Typography variant="h5" noWrap component="div">
+              Project NotiE
+          </Typography>
           </div>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
@@ -164,7 +168,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Dashboard", "Analytics",].map((text) => (
+          {["Dashboard", "StatusReport",].map((text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={() => handleListItemClick(text)}>
                 <ListItemIcon>
@@ -172,8 +176,8 @@ export default function PersistentDrawerLeft() {
                     <DashboardIcon />
                   ) : text === "Documents" ? (
                     <AccountTreeIcon />
-                  ) : text === "Analytics" ? (
-                    <GroupsIcon />
+                  ) : text === "StatusReport" ? (
+                    <AccountTreeIcon />
                
                   ) : null}
                 </ListItemIcon>
@@ -184,12 +188,12 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider />
         <List>
-          {["Recruitment",].map((text) => (
+          {["Analytics",].map((text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={() => handleListItemClick(text)}>
                 <ListItemIcon>
-                  {text === "Recruitment" ? (
-                    <SavedSearchIcon />
+                  {text === "Analytics" ? (
+                    <InsightsIcon />
                 
                   ) : null}
                 </ListItemIcon>
